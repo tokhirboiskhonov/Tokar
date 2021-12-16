@@ -1,11 +1,11 @@
-html{
-height: 100%;
+html {
+    height: 100%;
     box-sizing: border-box;
 }
 
 *,
 *::before,
-*::after{
+*::after {
     box-sizing: inherit;
     scroll-behavior: smooth;
 }
@@ -23,7 +23,7 @@ height: 100%;
     white-space: nowrap;
 }
 
-body{
+body {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -34,10 +34,19 @@ body{
     padding: 0;
 }
 
-img{
+img {
     display: block;
 }
 
-main{
+main {
     flex-grow: 1;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    /* Retina-specific stuff here */
 }
