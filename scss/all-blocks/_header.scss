@@ -3,14 +3,12 @@
 }
 
 .header .container {
-    display: flex;
     padding-top: 22px;
 }
 
 .header__top {
     display: flex;
     align-items: center;
-    width: 100%;
     margin-bottom: 18px;
 }
 
@@ -68,10 +66,19 @@
     margin-left: auto;
 }
 
+.burger{
+    display: none;
+}
+
+.telephone__number__icon{
+    display: none;
+}
+
 @media only screen and(max-width: 1200px) {
     .header__top {
         justify-content: space-between;
     }
+
     .header__logo__image {
         margin-right: 12px;
     }
@@ -80,11 +87,115 @@
         margin-right: 0;
     }
 
-    .header .socials{
+    .header .socials {
         margin-right: 0;
     }
 
-    .language__image{
+    .header .telephone__info {
+        margin-right: 8px;
+    }
+
+    .languages__list {
+        flex-grow: 0;
+    }
+
+    .language__image {
         margin-left: 0;
+    }
+}
+
+@media only screen and(max-width: 1100px) {
+    .header__top {
+        justify-content: space-between;
+    }
+
+    .header__logo {
+        margin-right: auto;
+    }
+
+    .header .socials {
+        display: none;
+        margin: 0 auto;
+    }
+
+    .call {
+        margin-right: 24px;
+    }
+
+    .header .nav__left__link{
+        padding: 15px 40px;
+    }
+}
+
+@media only screen and(max-width: 980px) {
+    .header__logo__text {
+        display: none;
+    }
+
+    .header .nav__left{
+        margin-right: 24px;
+    }
+
+    .header .nav__left__link{
+        padding: 15px 32px;
+    }
+}
+
+@media only screen and(max-width: 850px) {
+    .header .nav__left__link{
+        padding: 15px 24px;
+    }
+}
+
+@media only screen and(max-width: 800px) {
+    .header .nav__left__link{
+        padding: 15px 18px;
+    }
+}
+
+@media only screen and(max-width: 768px) {
+    .header .container {
+        padding: 18px 20px;
+    }
+
+    .header__top {
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    .header__logo {
+        margin: 0;
+    }
+
+    .header__logo__image {
+        margin-right: 0;
+    }
+
+    .call {
+        display: none;
+    }
+
+    .languages__list {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        order: -1;
+    }
+
+    .telephone__number__icon{
+        display: block;
+    }
+
+    .header .nav{
+        display: none;
+    }
+}
+
+@media only screen and(max-width: 425px) {
+    .header__logo__image{
+        width: 147px;
+        height: 20px;
     }
 }
