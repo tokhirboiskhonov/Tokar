@@ -66,12 +66,160 @@
     margin-left: auto;
 }
 
-.burger{
+.burger {
     display: none;
 }
 
-.telephone__number__icon{
+.telephone__number__icon {
     display: none;
+}
+
+// .body--active{
+//     overflow: hidden;
+// }
+
+.body--active .header {
+    .container {
+        position: relative;
+    }
+
+    .header__logo {
+        display: none;
+    }
+
+    .telephone__number__icon {
+        display: none;
+    }
+
+    .header__inner {
+        position: absolute;
+        right: 0;
+        bottom: -2px;
+        left: 0;
+        transform: translateY(100%);
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        height: calc(100vh - 73px);
+        margin-bottom: auto;
+        background-color: $color6;
+    }
+
+    .header__top {
+        flex-direction: column;
+        background-color: $color6;
+    }
+
+    .nav {
+        display: block;
+        margin-bottom: 120px;
+    }
+
+    .nav__left {
+        margin: 0;
+
+        .nav__link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 11px;
+                height: 6px;
+                background-image: url("../images/header/down.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                width: 11px;
+                height: 6px;
+                background-image: url("../images/header/down.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+
+    .nav__item--active .nav__link {
+        &::before {
+            background-image: url("../images/header/up.svg");
+        }
+
+        &::after {
+            background-image: url("../images/header/up.svg");
+        }
+    }
+
+    .nav__right {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .nav__item {
+        width: 100%;
+        padding: 0 20px;
+        text-align: center;
+        border: none;
+        border-bottom: 1px solid $color8;
+    }
+
+    .nav__link {
+        padding: 15px 0;
+        font-size: 14px;
+        color: $color1;
+    }
+
+    .nav__item--active .nav__link{
+        padding-bottom: 9px;
+    }
+
+    .socials {
+        display: block;
+        margin-bottom: 22px;
+    }
+
+    .socials__text {
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .socials__list {
+        justify-content: center;
+    }
+
+    .call {
+        display: block;
+        order: 2;
+        margin: 0;
+        margin-bottom: 35px;
+    }
+
+    .telephone__info{
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .telephone__number {
+        margin-bottom: 5px;
+        font-size: 18px;
+        line-height: 16px;
+    }
+
+    .call-back__text{
+        display: none;
+    }    
 }
 
 @media only screen and(max-width: 1200px) {
@@ -122,7 +270,7 @@
         margin-right: 24px;
     }
 
-    .header .nav__left__link{
+    .header .nav__left__link {
         padding: 15px 40px;
     }
 }
@@ -132,35 +280,46 @@
         display: none;
     }
 
-    .header .nav__left{
+    .header .nav__left {
         margin-right: 24px;
     }
 
-    .header .nav__left__link{
+    .header .nav__left__link {
         padding: 15px 32px;
     }
 }
 
 @media only screen and(max-width: 850px) {
-    .header .nav__left__link{
+    .header .nav__left__link {
         padding: 15px 24px;
     }
 }
 
 @media only screen and(max-width: 800px) {
-    .header .nav__left__link{
+    .header .nav__left__link {
         padding: 15px 18px;
     }
 }
 
 @media only screen and(max-width: 768px) {
+    .header {
+        border-bottom: 1px solid $color8;
+    }
+
     .header .container {
-        padding: 18px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20px;
+    }
+
+    .header__inner {
+        order: -1;
     }
 
     .header__top {
-        margin: 0;
         justify-content: space-between;
+        margin: 0;
     }
 
     .header__logo {
@@ -182,19 +341,44 @@
     .burger {
         display: block;
         order: -1;
+
+        &::after {
+            line-height: 30px;
+        }
     }
 
-    .telephone__number__icon{
+    .telephone__number__icon {
         display: block;
     }
 
-    .header .nav{
+    .header .nav {
         display: none;
+    }
+
+    .nav__item--active > .nav__sublist{
+        display: block;
     }
 }
 
 @media only screen and(max-width: 425px) {
-    .header__logo__image{
+    .header .container {
+        padding: 13px 20px;
+    }
+
+    .body--active .header {
+        .burger {
+            &::after {
+                line-height: 30px;
+            }
+        }
+
+        .header__inner{
+            height: calc(100vh - 56px);
+        }
+    
+    }
+
+    .header__logo__image {
         width: 147px;
         height: 20px;
     }
