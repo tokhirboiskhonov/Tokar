@@ -74,9 +74,15 @@
     display: none;
 }
 
-// .body--active{
-//     overflow: hidden;
-// }
+.body--active {
+    .main {
+        display: none;
+    }
+
+    .footer {
+        display: none;
+    }
+}
 
 .body--active .header {
     .container {
@@ -100,7 +106,7 @@
         display: flex;
         flex-direction: column-reverse;
         justify-content: flex-end;
-        min-height: calc(100% - 73px);
+        // min-height: calc(100% - 73px);
         margin-bottom: auto;
         background-color: $color6;
     }
@@ -180,7 +186,7 @@
         color: $color1;
     }
 
-    .nav__item--active .nav__link{
+    .nav__item--active .nav__link {
         padding-bottom: 9px;
     }
 
@@ -206,7 +212,7 @@
         margin-bottom: 35px;
     }
 
-    .telephone__info{
+    .telephone__info {
         margin: 0;
         margin-bottom: 10px;
     }
@@ -217,9 +223,9 @@
         line-height: 16px;
     }
 
-    .call-back__text{
+    .call-back__text {
         display: none;
-    }    
+    }
 }
 
 @media only screen and(max-width: 1200px) {
@@ -355,7 +361,7 @@
         display: none;
     }
 
-    .nav__item--active > .nav__sublist{
+    .nav__item--active > .nav__sublist {
         display: block;
     }
 }
@@ -372,10 +378,9 @@
             }
         }
 
-        .header__inner{
+        .header__inner {
             min-height: calc(100% - 56px);
         }
-    
     }
 
     .header__logo__image {
